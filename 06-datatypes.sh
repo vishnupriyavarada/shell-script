@@ -11,4 +11,4 @@ echo "script executed at ..$TIMESTAMP"
 
 SUM=$(($NUMBER1+$NUMBER2))
 
-echo "Addition of 2 numbers :: $SUM"
+echo "Addition of 2 numbers :: ${SUM}"
