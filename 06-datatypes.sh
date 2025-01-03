@@ -13,4 +13,4 @@ SUM=$(($NUMBER1+$NUMBER2))
 
 echo "Addition of 2 numbers :: ${SUM}"
 
-echo "list of files :: $(ls -l)"
+echo "list of files :: $(ls -l | wc -l)"
