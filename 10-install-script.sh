@@ -24,8 +24,25 @@
  if [ $USERID -ne 0 ]
  then
     echo "ERROR: You must have sudo/root user access to execute this script"
- else
-    dnf install mysql -y
  fi
 
- 
+ dnf install mysql -y
+
+ if [ $? -ne 0 ]
+ then
+    echo "Installing mySQL ... Failure"
+    exit 1
+ else 
+    echo "Installing mySQL ... Success"
+ fi
+
+ dnf install git -y
+
+ if [ $? -ne 0]
+ then
+  echo "Installing Git ... Failure"
+ else
+  echo "Installing Git ... Success"
+ fi
+  
+
