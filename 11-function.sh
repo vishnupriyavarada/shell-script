@@ -36,6 +36,7 @@
  if [ $USERID -ne 0 ]
  then
     echo "ERROR: You must have sudo/root user access to execute this script"
+    exit 1
  fi
 
 dnf list installed mysql
