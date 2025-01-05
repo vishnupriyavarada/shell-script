@@ -7,7 +7,7 @@
 # else print number is less than 100
 
 # Get number from user
-read NUMBER
+read NUMBER=$1
 
 # check if the number is greater than 100 or not
 # -gt, -lt, -eq, -ge, -le 
