@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Print a number greater than 100 or not
 
 # get the number from user
@@ -7,7 +8,8 @@
 # else print number is less than 100
 
 # Get number from user
-NUMBER=$1
+echo "Enter a number : "
+read NUMBER
 
 # check if the number is greater than 100 or not
 # -gt, -lt, -eq, -ge, -le 
