@@ -8,10 +8,10 @@
 # else print number is less than 100
 
 # Get number from user
-#echo "Enter a number : "
-#read NUMBER
+echo "Enter a number : "
+read NUMBER
 
-NUMBER=$1
+#NUMBER=$1
 
 # check if the number is greater than 100 or not
 # -gt, -lt, -eq, -ge, -le 
