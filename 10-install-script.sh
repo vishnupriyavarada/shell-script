@@ -26,23 +26,59 @@
     echo "ERROR: You must have sudo/root user access to execute this script"
  fi
 
- dnf install mysql -y
+dnf list installed mysql
+
+if [ $? -ne 0 ]
+then
+    dnf install mysql -y
+
+    if [ $? -ne 0 ]
+    then
+        echo "Installing mySQL ... Failure"
+        exit 1
+    else 
+        echo "Installing mySQL ... Success"
+    fi
+else
+    echo "mySQL is already installed"
+ fi   
+
+ dnf list installed git
 
  if [ $? -ne 0 ]
  then
-    echo "Installing mySQL ... Failure"
-    exit 1
- else 
-    echo "Installing mySQL ... Success"
- fi
+    dnf install git -y
 
- dnf install git -y
-
- if [ $? -ne 0 ]
- then
-  echo "Installing Git ... Failure"
+    if [ $? -ne 0 ]
+    then
+    echo "Installing Git ... Failure"
+    else
+    echo "Installing Git ... Success"
+    fi
  else
-  echo "Installing Git ... Success"
+    echo "Git is already installed"
  fi
+
+
+
+
+#  dnf install mysql -y
+
+#  if [ $? -ne 0 ]
+#  then
+#     echo "Installing mySQL ... Failure"
+#     exit 1
+#  else 
+#     echo "Installing mySQL ... Success"
+#  fi
+
+#  dnf install git -y
+
+#  if [ $? -ne 0 ]
+#  then
+#   echo "Installing Git ... Failure"
+#  else
+#   echo "Installing Git ... Success"
+#  fi
   
 
