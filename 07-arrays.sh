@@ -6,3 +6,5 @@ MOVIES=("luckybhaskar" "amaran" "puspa2") # index starts from 0 and size of this
 echo "First Movie : ${MOVIES[0]}"
 echo "Second Movie : ${MOVIES[1]}"
 echo "Third Movie : ${MOVIES[2]}"
+
+echo "All movies in the variable MOVIES is : ${MOVIES[@]}
