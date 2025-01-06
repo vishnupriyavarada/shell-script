@@ -24,7 +24,7 @@
  G="\e[32m"
  Y="\e[33m"
  LOGS_FOLDER="/var/log/shell-scripts-log"
- LOGS_FILE=$(echo $0 | cut -d "." f1)
+ LOGS_FILE=$(echo $0 | cut -d "." -f1)
  TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
  LOGS_FILE_NAME="${LOGS_FOLDER}/${LOGS_FILE}-${TIME_STAMP}.log"
 
