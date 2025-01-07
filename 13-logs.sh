@@ -49,6 +49,7 @@
  fi
 
 dnf list installed mysql &>>${LOGS_FILE_NAME}
+echo "Exit status before  installing mySQL $?" &>>${LOGS_FILE_NAME}
 
 if [ $? -ne 0 ]
 then
@@ -59,13 +60,14 @@ else
  fi   
 
  dnf list installed git &>>${LOGS_FILE_NAME}
+ echo "Exit status before installing git $?" &>>${LOGS_FILE_NAME}
 
  if [ $? -ne 0 ]
  then
     dnf install git -y &>>${LOGS_FILE_NAME}
     VALIDATE $? "git"
  else
-    echo -e " Git is already $Y installed"
+    echo -e " Git is already $Y  installed"
  fi
 
 
