@@ -23,6 +23,8 @@
  R="\e[31m"
  G="\e[32m"
  Y="\e[33m"
+ N="\e[0m" # Normal colour white
+
  LOGS_FOLDER="/var/log/shell-scripts-log"
  LOGS_FILE=$(echo $0 | cut -d "." -f1)
  TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
@@ -32,10 +34,10 @@
  {
     if [ $1 -ne 0 ]
     then
-        echo -e "Installing $2... $R Failure"
+        echo -e "Installing $2... $R Failure $N"
         exit 1
     else 
-        echo -e "Installing $2 ... $G Success"
+        echo -e "Installing $2 ... $G Success $N"
     fi
 
  }
@@ -56,7 +58,7 @@ then
     dnf install mysql -y &>>${LOGS_FILE_NAME}
     VALIDATE $? "mysql"
 else
-    echo -e " mySQL is already $Y  installed" 
+    echo -e " mySQL is already $Y  installed $N" 
  fi   
 
  dnf list installed git &>>${LOGS_FILE_NAME}
@@ -67,7 +69,7 @@ else
     dnf install git -y &>>${LOGS_FILE_NAME}
     VALIDATE $? "git"
  else
-    echo -e " Git is already $Y  installed"
+    echo -e " Git is already $Y  installed $N"
  fi
 
 
