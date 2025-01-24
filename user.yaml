@@ -1,0 +1,24 @@
+- name : "Vishnupriya Varada"
+  email : test@gmail.com
+  addresses :
+  - type : permanent
+    doorno : 124
+    street : "A street"
+    city : Bangalore
+  - type : Current
+    doorno : 124
+    street : "A street"
+    city : Bangalore
+
+- name : Krishna
+  email : abc@gmail.com
+  addresses :
+  - type : permanent
+    doorno : 567
+    street : "A street"
+    city : Bangalore
+  - type : Current
+    doorno : 124
+    street : "A street"
+    city : Bangalore
+
