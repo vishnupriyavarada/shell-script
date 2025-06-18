@@ -13,4 +13,4 @@ SUM=$(($NUMBER1+$NUMBER2))
 
 echo "Addition of 2 numbers :: ${SUM}"
 
-echo "list of files :: $(ls -l | wc)" # wc - word count. Counts the number files in the current folder
+echo "list of files :: $(ls -l | wc -l)" # wc - word count. Counts the number files in the current folder
